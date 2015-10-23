@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "338de80055ec6119dcdd"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "525dc5e29167f6dc9192"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -9410,7 +9410,7 @@
 
 	_reactDom2['default'].render(_react2['default'].createElement(_componentsVoting2['default'], { pair: pair }), document.getElementById('app'));
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(230); if (makeExportsHot(module, __webpack_require__(124))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(231); if (makeExportsHot(module, __webpack_require__(124))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ },
@@ -29380,6 +29380,48 @@
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(62), RootInstanceProvider = __webpack_require__(70), ReactMount = __webpack_require__(72), React = __webpack_require__(124); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _react = __webpack_require__(124);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Winner = __webpack_require__(230);
+
+	var _Winner2 = _interopRequireDefault(_Winner);
+
+	var _Vote = __webpack_require__(234);
+
+	var _Vote2 = _interopRequireDefault(_Vote);
+
+	exports['default'] = _react2['default'].createClass({
+	  displayName: 'Voting',
+
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'div',
+	      null,
+	      this.props.winner ? _react2['default'].createElement(_Winner2['default'], { ref: 'winner', winner: this.props.winner }) : _react2['default'].createElement(_Vote2['default'], this.props)
+	    );
+	  }
+	});
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(231); if (makeExportsHot(module, __webpack_require__(124))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Voting.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(62), RootInstanceProvider = __webpack_require__(70), ReactMount = __webpack_require__(72), React = __webpack_require__(124); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -29393,43 +29435,31 @@
 	var _react2 = _interopRequireDefault(_react);
 
 	exports["default"] = _react2["default"].createClass({
-	  displayName: "Voting",
+	  displayName: "Winner",
 
-	  getPair: function getPair() {
-	    return this.props.pair || [];
-	  },
 	  render: function render() {
-	    return;
-	    _react2["default"].createElement(
+	    return _react2["default"].createElement(
 	      "div",
-	      { className: "voting" },
-	      this.getPair().map(function (entry) {
-	        return _react2["default"].createElement(
-	          "button",
-	          { key: entry },
-	          _react2["default"].createElement(
-	            "h1",
-	            null,
-	            entry
-	          )
-	        );
-	      })
+	      { className: "winner" },
+	      "Winner is ",
+	      this.props.winner,
+	      "!"
 	    );
 	  }
 	});
 	module.exports = exports["default"];
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(230); if (makeExportsHot(module, __webpack_require__(124))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Voting.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(231); if (makeExportsHot(module, __webpack_require__(124))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Winner.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ },
-/* 230 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var isReactClassish = __webpack_require__(231),
-	    isReactElementish = __webpack_require__(232);
+	var isReactClassish = __webpack_require__(232),
+	    isReactElementish = __webpack_require__(233);
 
 	function makeExportsHot(m, React) {
 	  if (isReactElementish(m.exports, React)) {
@@ -29483,7 +29513,7 @@
 
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports) {
 
 	function hasRender(Class) {
@@ -29533,10 +29563,10 @@
 	module.exports = isReactClassish;
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isReactClassish = __webpack_require__(231);
+	var isReactClassish = __webpack_require__(232);
 
 	function isReactElementish(obj, React) {
 	  if (!obj) {
@@ -29548,6 +29578,70 @@
 	}
 
 	module.exports = isReactElementish;
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(62), RootInstanceProvider = __webpack_require__(70), ReactMount = __webpack_require__(72), React = __webpack_require__(124); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	var _react = __webpack_require__(124);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	exports["default"] = _react2["default"].createClass({
+	  displayName: "Vote",
+
+	  getPair: function getPair() {
+	    return this.props.pair || [];
+	  },
+	  isDisabled: function isDisabled() {
+	    return !!this.props.hasVoted;
+	  },
+	  hasVotedFor: function hasVotedFor(entry) {
+	    return this.props.hasVoted === entry;
+	  },
+	  render: function render() {
+	    var _this = this;
+
+	    return _react2["default"].createElement(
+	      "div",
+	      { className: "voting" },
+	      this.getPair().map(function (entry) {
+	        return _react2["default"].createElement(
+	          "button",
+	          { key: entry,
+	            disabled: _this.isDisabled(),
+	            onClick: function () {
+	              return _this.props.vote(entry);
+	            } },
+	          _react2["default"].createElement(
+	            "h1",
+	            null,
+	            entry
+	          ),
+	          _this.hasVotedFor(entry) ? _react2["default"].createElement(
+	            "div",
+	            { className: "label" },
+	            "Voted"
+	          ) : null
+	        );
+	      })
+	    );
+	  }
+	});
+	module.exports = exports["default"];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(231); if (makeExportsHot(module, __webpack_require__(124))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Vote.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }
 /******/ ]);
